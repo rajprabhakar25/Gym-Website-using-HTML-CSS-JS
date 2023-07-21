@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Raj Fitness</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/invoice.css">
+
+<body>
+    <header class="header">
+
+        <div class="left">
+            <img src="../assets/images/gym.jpg" alt="">
+            <div>Raj Fitness</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./subscription.html">View Plans</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+
+        <div class="right">
+            <button class="btn" onclick="window.open('tel:8903557169');">Call Us Now</button>
+            <button class="btn" onclick="sendEmail();">Email Us</button>
+        </div>
+    </header>
+    <h1>INVOICE</h1>
+    <div class="container">
+            <b>BILLED TO:</b><p id="name"></p>
+            <b>INVOICE DATE:</b><p id="date"></p>
+            <b>PLAN EXPIRY DATE:</b><p id="newdate"></p>
+    </div>
+    <table class="bill">
+        <tr>
+            <th>DESCRIPTION</th>
+            <th>VALUES</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td id="name1"></td>
+        </tr>
+        <tr>
+            <td>E-Mail</td>
+            <td id="mail"></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td id="phone"></td>
+        </tr>
+        <tr>
+            <td>Selected Plan</td>
+            <td id="plans"></td>
+        </tr>
+        <tr>
+            <td>Amount</td>
+            <td id="fees"></td>
+        </tr>
+        <tr>
+            <td>Payment Status</td>
+            <td id="status"></td>
+        </tr>
+    </table>
+
+    <h2>Kindly take a printout of this page and bring it with you for verification.</h2>
+
+
+    <script>
+        var date = new Date();
+        var day = date.getDate();
+        var month = date.getMonth()+1;
+        var year = date.getFullYear();
+        var ct = day+"/"+month+"/"+year;
+
+        localStorage.setItem("date",ct);
+
+        document.getElementById("newdate").innerHTML = localStorage.getItem("newdate");
+        document.getElementById("name").innerHTML = localStorage.getItem("full_name");
+        document.getElementById("name1").innerHTML = localStorage.getItem("full_name")
+        document.getElementById("mail").innerHTML = localStorage.getItem("email");
+        document.getElementById("phone").innerHTML = localStorage.getItem("number");
+        document.getElementById("plans").innerHTML = localStorage.getItem("plan");
+        document.getElementById("fees").innerHTML = localStorage.getItem("amount");
+        document.getElementById("status").innerHTML = localStorage.getItem("payment");
+        document.getElementById("date").innerHTML = localStorage.getItem("date");
+
+        function sendEmail(){
+            window.location.assign("mailto:rajprabhakar3107@gmail.com");
+        }
+    </script>
+</body>
+</html>
+
+

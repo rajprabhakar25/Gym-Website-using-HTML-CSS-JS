@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/contact.css">
+
+<body>
+    <header class="header">
+
+        <div class="left">
+            <img src="../assets/images/gym.jpg" alt="">
+            <div>Raj Fitness</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./subscription.html">View Plans</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+
+        <div class="right">
+            <button class="btn" onclick="window.open('tel:8903557169');">Call Us Now</button>
+            <button class="btn" onclick="sendEmail();">Email Us</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you!<br>
+            &emsp;&emsp;Whether you have a question, need more information, or simply want to chat about your fitness goals, our team at [Your Gym Name] is here to assist you. Please feel free to reach out to us using any of the contact methods below:<br><br>
+            &emsp;&emsp;Phone: 1234567890<br>
+            &emsp;&emsp;Email: <a href="#">raj@fitness.com</a><br><br>
+            &emsp;&emsp;Our friendly and knowledgeable staff is available during our business hours to provide you with the support and guidance you need. We understand that everyone's schedule is different, so we offer flexible hours to accommodate your busy lifestyle.<br>
+            &emsp;&emsp;You can also stay connected with us on social media for the latest updates, fitness tips, and special promotions. Follow us on:<br><br>
+            &emsp;&emsp;Facebook: <a href="#">rajfitness001</a><br>
+            &emsp;&emsp;Instagram: <a href="#">@rajfitness001</a><br>
+            &emsp;&emsp;Twitter: <a href="#">rajfitness001</a></p>
+    </div>
+
+    <script>
+        function sendEmail(){
+            window.location.assign("mailto:rajprabhakar3107@gmail.com");
+        }
+    </script>
+</body>
+</html>

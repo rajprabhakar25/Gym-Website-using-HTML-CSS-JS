@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Raj Fitness Plans</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/subscription.css">
+
+<body>
+    <header class="header">
+
+        <div class="left">
+            <img src="../assets/images/gym.jpg" alt="">
+            <div>Raj Fitness</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="#">View Plans</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+
+        <div class="right">
+            <button class="btn" onclick="window.open('tel:8903557169');">Call Us Now</button>
+            <button class="btn" onclick="sendEmail();"Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <div>
+            <h1>Per Month</h1>
+            <p><s>$ 24.25</s>&emsp;&emsp;<b>30% OFF</b></p>
+            <input type="text" id="one" class="amount" value="$ 16.98" disabled>
+            <h3>3-D Body Composition Assesment + Fitness Orientation & Clinic + 1 week of Studio and Team Training</h3>
+            <button onclick="planone()">Pay</button>
+        </div>
+        <div>
+            <h1>6 Months</h1>
+            <p><s>$ 145.51</s>&emsp;&emsp;<b>33% OFF</b></p>
+            <input type="text" id="two" class="amount" value="$ 97.49" disabled>
+            <h3>3-D Body Composition Assesment + Fitness Orientation & Clinic + 1 week of Studio and Team Training</h3>
+            <button onclick="plantwo()">Pay</button>
+        </div>
+        <div>
+            <h1>Per Year</h1>
+            <p><s>$ 291.02</s>&emsp;&emsp;<b>35% OFF</b></p>
+            <input type="text" id="three" class="amount" value="$ 189.17" disabled>
+            <h3>3-D Body Composition Assesment + Fitness Orientation & Clinic + 1 week of Studio and Team Training</h3>
+            <button onclick="planthree()">Pay</button>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        function planone(){
+            var plan = 'One Month Plan';
+            var payment = 'Success';
+            var amount = document.getElementById("one").value;
+
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth()+1+1;
+            var year = date.getFullYear();
+            var nt = day+"/"+month+"/"+year;
+
+            localStorage.setItem('plan',plan);
+            localStorage.setItem('payment',payment);
+            localStorage.setItem('amount',amount);
+            localStorage.setItem('newdate',nt);
+
+            location.href = "./invoice.html";
+
+            alert("Payment was Successful");
+        }
+
+        function plantwo(){
+            var plan = 'Six Months Plan';
+            var payment = 'Success';
+            var amount = document.getElementById("two").value;
+
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth()+1+6;
+            var year = date.getFullYear();
+            var nt = day+"/"+month+"/"+year;
+
+            localStorage.setItem('plan',plan);
+            localStorage.setItem('payment',payment);
+            localStorage.setItem('amount',amount);
+            localStorage.setItem('newdate',nt);
+
+            location.href = "./invoice.html";
+
+            alert("Payment was Successful");
+        }
+
+        function planthree(){
+            var plan = 'One Year Plan';
+            var payment = 'Success';
+            var amount = document.getElementById("three").value;
+
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth()+1;
+            var year = date.getFullYear()+1;
+            var nt = day+"/"+month+"/"+year;
+
+            localStorage.setItem('plan',plan);
+            localStorage.setItem('payment',payment);
+            localStorage.setItem('amount',amount);
+            localStorage.setItem('newdate',nt);
+
+            location.href = "./invoice.html";
+
+            alert("Payment was Successful");
+        }
+
+        function sendEmail(){
+            window.location.assign("mailto:rajprabhakar3107@gmail.com");
+        }
+    </script>
+</body>
+</html>

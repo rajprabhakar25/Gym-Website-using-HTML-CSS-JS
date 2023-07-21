@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Raj Fitness</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+
+<body>
+    <header class="header">
+
+        <div class="left">
+            <img src="./assets/images/gym.jpg" alt="">
+            <div>Raj Fitness</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="./html/about.html">About Us</a></li>
+                <li><a href="./html/subscription.html">View Plans</a></li>
+                <li><a href="./html/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+
+        <div class="right">
+            <button class="btn" onclick="window.open('tel:8903557169');">Call Us Now</button>
+            <button class="btn" onclick="sendEmail();">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join Now!!!</h1>
+        <form onsubmit="myfunc(event)" method="post" action="/what/ever">
+            <div class="form-group">
+                <input type="text" id="full_name" placeholder="Enter your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="age" placeholder="Enter your Age" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="gender" placeholder="Enter your Gender" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="locality" placeholder="Enter your Locality" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Enter your Email Id" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="number" placeholder="Enter your Phone Number" required>
+            </div>
+            <input type="submit" class="btn" value="Submit">
+
+        </form>
+
+    </div>
+    <script type="text/javascript">
+        function myfunc(event){
+            event.preventDefault();
+
+            var full_name = document.getElementById("full_name").value;
+            var age = document.getElementById("age").value;
+            var gender = document.getElementById("gender").value;
+            var locality = document.getElementById("locality").value;
+            var email = document.getElementById("email").value;
+            var number = document.getElementById("number").value;
+
+            localStorage.setItem('full_name',full_name);
+            localStorage.setItem('age',age);
+            localStorage.setItem('gender',gender);
+            localStorage.setItem('locality',locality);
+            localStorage.setItem('email',email);
+            localStorage.setItem('number',number);
+
+            location.href = "./html/subscription.html"
+
+            alert("Your details are Registered");
+
+            function sendEmail(){
+            window.location.assign("mailto:rajprabhakar3107@gmail.com");
+        }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+body{
+    font-family: Ariel;
+    text-align: center;
+
+}
+
+.header{
+    display:flex;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+.left img {
+        width: 145px;
+        filter: invert(100%);
+}
+
+.left{
+    margin: auto 60px;
+    text-align: center;
+}
+
+.left:hover{
+    cursor: pointer;
+}
+
+.right{
+    margin: auto 60px;
+}
+
+    .navbar li {
+        display: inline-block;
+        font-size: 25px;
+    }
+
+    @media (max-width: 800px){
+        .navbar{
+            flex: 100%;
+            flex-direction: column;
+        }
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+
+    }
+
+    .navbar li a:hover {
+        text-decoration: underline;
+        color: grey;
+
+    }
+
+    .btn {
+        font-family: 'Baloo Bhai', cursive;
+        margin: 9px 9px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+.bill,th,tr,td{
+    border: 2px solid black;
+    padding: 5px;
+    margin: 20px auto;
+}
+
+tr{
+    padding: 0px;
+
+}
+
+td{
+    text-align: right;
+
+}
+
+td,th{
+    padding: 8px 10px 8px 200px;
+    margin: 5px;
+}
+
+body table colgroup col{
+    width:100%;
+}
